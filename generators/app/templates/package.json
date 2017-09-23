@@ -1,0 +1,38 @@
+{
+  "name": "<%= moduleName %>",
+  "version": "1.0.0",
+  "description": "<%= moduleDesc %>",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc -w",
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= githubUsername %>/<%= moduleName %>.git"
+  },
+  "keywords": [
+    <% moduleKeywords.forEach(function(keyword, i, arr) { %>"<%= keyword %>"<% if (i !== arr.length - 1) { %>,
+    <% } %><% }); %>
+  ],
+  "bugs": {
+    "url": "https://github.com/<%= githubUsername %>/<%= moduleName %>/issues"
+  },
+  "homepage": "https://github.com/<%= githubUsername %>/<%= moduleName %>#readme",
+  "author": "<%= name %> <<%= email %>>",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      "^.+\\.(j|t)sx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "src/.*(__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}

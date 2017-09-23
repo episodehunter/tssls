@@ -1,0 +1,21 @@
+{
+  "name": "generator-tssls",
+  "version": "1.0.0",
+  "description": "serverless generator for typescript",
+  "main": "generators/app/index.js",
+  "dependencies": {
+    "camelcase": "^4.1.0",
+    "generator-travis": "^1.5.3",
+    "humanize-url": "^1.0.1",
+    "normalize-url": "^1.9.1",
+    "slug": "^0.9.1",
+    "yeoman-generator": "^2.0.0",
+    "yosay": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oskar Karlsson <kontakta@oskarkarlsson.nu>",
+  "license": "MIT"
+}
