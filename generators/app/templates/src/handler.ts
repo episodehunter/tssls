@@ -2,7 +2,7 @@ import { connect, Connection, entities } from '@episodehunter/datastore';
 import { SNSEvent, Context, Callback } from 'aws-lambda';
 import * as assertRequiredConfig from 'assert-env';
 
-assertRequiredConfig(
+assertRequiredConfig([
   'EH_DB_HOST',
   'EH_DB_PORT',
   'EH_DB_USERNAME',
@@ -10,7 +10,7 @@ assertRequiredConfig(
   'EH_DB_DATABASE',
   'EH_RAVEN_DSN',
   'EH_RAVEN_PROJECT'
-);
+]);
 
 export async function update(event: SNSEvent, context: Context, callback: Callback) {
   const message = event.Records[0].Sns.Message;
